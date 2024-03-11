@@ -69,15 +69,13 @@ class KnownDRMIE(UnsupportedInfoExtractor):
     }, {
         'url': r'https://www.disneyplus.com',
         'only_matching': True,
-    },# {
-#        'url': 'https://open.spotify.com/artist/',
-#        'only_matching': True,
-#    },
-#       {
-#        'url': 'https://open.spotify.com/track/',
-#        'only_matching': True,
-#    }, 
-       {
+    }, {
+        'url': 'https://open.spotify.com/artist/',
+        'only_matching': False,
+    }, {
+        'url': 'https://open.spotify.com/track/',
+        'only_matching': False,
+    }, {
         # https://github.com/yt-dlp/yt-dlp/issues/4122
         'url': 'https://www.tvnz.co.nz/shows/ice-airport-alaska/episodes/s1-e1',
         'only_matching': True,
