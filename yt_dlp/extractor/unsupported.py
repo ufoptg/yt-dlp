@@ -152,11 +152,12 @@ class KnownDRMIE(UnsupportedInfoExtractor):
     }]
 
     def _real_extract(self, url):
-        raise ExtractorError(
-            f'The requested site is known to use DRM protection. '
-            f'It will {self._downloader._format_err("NOT", self._downloader.Styles.EMPHASIS)} be supported.{LF}'
-            f'Please {self._downloader._format_err("DO NOT", self._downloader.Styles.ERROR)} open an issue, '
-            'unless you have evidence that the video is not DRM protected', expected=True)
+        pass
+#        raise ExtractorError(
+#            f'The requested site is known to use DRM protection. '
+#            f'It will {self._downloader._format_err("NOT", self._downloader.Styles.EMPHASIS)} be supported.{LF}'
+#            f'Please {self._downloader._format_err("DO NOT", self._downloader.Styles.ERROR)} open an issue, '
+#            'unless you have evidence that the video is not DRM protected', expected=True)
 
 
 class KnownPiracyIE(UnsupportedInfoExtractor):
