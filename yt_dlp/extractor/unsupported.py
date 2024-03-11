@@ -31,7 +31,7 @@ class KnownDRMIE(UnsupportedInfoExtractor):
         r'channel(?:4|5)\.com',
         r'peacocktv\.com',
         r'(?:[\w\.]+\.)?disneyplus\.com',
-        r'open\.spotify\.com/(?:track|playlist|album|artist)',
+#        r'open\.spotify\.com/(?:track|playlist|album|artist)',
         r'tvnz\.co\.nz',
         r'oneplus\.ch',
         r'artstation\.com/learning/courses',
@@ -152,12 +152,11 @@ class KnownDRMIE(UnsupportedInfoExtractor):
     }]
 
     def _real_extract(self, url):
-        pass
-#        raise ExtractorError(
-#            f'The requested site is known to use DRM protection. '
-#            f'It will {self._downloader._format_err("NOT", self._downloader.Styles.EMPHASIS)} be supported.{LF}'
-#            f'Please {self._downloader._format_err("DO NOT", self._downloader.Styles.ERROR)} open an issue, '
-#            'unless you have evidence that the video is not DRM protected', expected=True)
+        raise ExtractorError(
+            f'The requested site is known to use DRM protection. '
+            f'It will {self._downloader._format_err("NOT", self._downloader.Styles.EMPHASIS)} be supported.{LF}'
+            f'Please {self._downloader._format_err("DO NOT", self._downloader.Styles.ERROR)} open an issue, '
+            'unless you have evidence that the video is not DRM protected', expected=True)
 
 
 class KnownPiracyIE(UnsupportedInfoExtractor):
